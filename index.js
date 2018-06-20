@@ -8,17 +8,17 @@ var CoinFlip = function () {
 
     this.triggers = {
         flip: function (dfd) {
-            var state = (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
+            var state = (Math.floor(Math.random() * 2) === 0) ? 'heads' : 'tails';
             dfd.resolve([
                 "It's " + state
             ]);
         }
     };
-
 };
 
 module.exports = {
     namespace: 'coinflip',
+    description: 'Flip a Coin',
     examples: [
         "Heads or tails?",
         "Flip a coin"
